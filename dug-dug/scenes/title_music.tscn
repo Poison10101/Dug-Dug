@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://di7k1c2cwr7kc"]
+
+[ext_resource type="AudioStream" uid="uid://qte507c0m1cq" path="res://assets/Audio/RoboCop.mp3" id="1_xmq28"]
+
+[node name="Title Music" type="AudioStreamPlayer"]
+stream = ExtResource("1_xmq28")
+autoplay = true

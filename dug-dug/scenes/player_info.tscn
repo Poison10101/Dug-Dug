@@ -1,0 +1,57 @@
+[gd_scene load_steps=8 format=3 uid="uid://csg2207vus7yq"]
+
+[ext_resource type="FontFile" uid="uid://ce0unc25ake06" path="res://assets/C64_Pro_Mono-STYLE.ttf" id="1_577yx"]
+[ext_resource type="Script" path="res://scripts/player_info.gd" id="1_lisy3"]
+[ext_resource type="Script" path="res://scripts/restart.gd" id="3_x2s22"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a7r0k"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vval7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bhrdk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cdnek"]
+
+[node name="Player Info" type="Panel"]
+offset_right = 320.0
+offset_bottom = 11.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_a7r0k")
+script = ExtResource("1_lisy3")
+
+[node name="Level" type="Label" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 2.0
+offset_right = 85.0
+offset_bottom = 18.0
+theme_override_fonts/font = ExtResource("1_577yx")
+theme_override_font_sizes/font_size = 8
+text = "LEVEL: 1"
+
+[node name="Gems" type="Label" parent="."]
+layout_mode = 0
+offset_left = 223.0
+offset_top = 2.0
+offset_right = 287.0
+offset_bottom = 19.0
+theme_override_fonts/font = ExtResource("1_577yx")
+theme_override_font_sizes/font_size = 8
+text = "GEMS: 0"
+
+[node name="Restart" type="Button" parent="."]
+layout_mode = 0
+offset_left = 121.0
+offset_top = -2.0
+offset_right = 185.0
+offset_bottom = 14.0
+theme_override_fonts/font = ExtResource("1_577yx")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/focus = SubResource("StyleBoxEmpty_vval7")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_bhrdk")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_cdnek")
+text = "RESTART"
+flat = true
+script = ExtResource("3_x2s22")
+
+[connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]

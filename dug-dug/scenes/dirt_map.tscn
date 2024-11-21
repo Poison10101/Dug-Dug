@@ -1,0 +1,21 @@
+[gd_scene load_steps=8 format=3 uid="uid://c4bwknf1sdg5g"]
+
+[ext_resource type="PackedScene" uid="uid://b7o0yqgk2dcr2" path="res://scenes/dirt_block.tscn" id="1_71xxn"]
+[ext_resource type="PackedScene" uid="uid://bdmgj0jq370bb" path="res://scenes/boulder.tscn" id="2_2ncuu"]
+[ext_resource type="PackedScene" uid="uid://0xlhkcrj21od" path="res://scenes/gem.tscn" id="3_mk314"]
+[ext_resource type="PackedScene" uid="uid://c5pbuwcukptv0" path="res://scenes/brick.tscn" id="4_t54fe"]
+[ext_resource type="PackedScene" uid="uid://vy5capvelb56" path="res://scenes/door.tscn" id="5_ina21"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_gxsj3"]
+scenes/1/scene = ExtResource("1_71xxn")
+scenes/2/scene = ExtResource("2_2ncuu")
+scenes/3/scene = ExtResource("3_mk314")
+scenes/4/scene = ExtResource("4_t54fe")
+scenes/5/scene = ExtResource("5_ina21")
+
+[sub_resource type="TileSet" id="TileSet_mf1cg"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetScenesCollectionSource_gxsj3")
+
+[node name="Dirt Map" type="TileMapLayer"]
+tile_set = SubResource("TileSet_mf1cg")

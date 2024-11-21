@@ -1,0 +1,37 @@
+[gd_scene load_steps=9 format=3 uid="uid://d0kalwgr6jb80"]
+
+[ext_resource type="PackedScene" uid="uid://b7o0yqgk2dcr2" path="res://scenes/dirt_block.tscn" id="1_167x3"]
+[ext_resource type="PackedScene" uid="uid://bdmgj0jq370bb" path="res://scenes/boulder.tscn" id="2_fa3nr"]
+[ext_resource type="PackedScene" uid="uid://0xlhkcrj21od" path="res://scenes/gem.tscn" id="3_52od6"]
+[ext_resource type="PackedScene" uid="uid://c5pbuwcukptv0" path="res://scenes/brick.tscn" id="4_q34us"]
+[ext_resource type="PackedScene" uid="uid://vy5capvelb56" path="res://scenes/door.tscn" id="5_m0dkv"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_6qtic"]
+scenes/1/scene = ExtResource("1_167x3")
+scenes/2/scene = ExtResource("2_fa3nr")
+scenes/3/scene = ExtResource("3_52od6")
+scenes/4/scene = ExtResource("4_q34us")
+scenes/5/scene = ExtResource("5_m0dkv")
+
+[sub_resource type="TileSet" id="TileSet_62pl3"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+sources/3 = SubResource("TileSetScenesCollectionSource_6qtic")
+
+[sub_resource type="GDScript" id="GDScript_j62wk"]
+script/source = "extends TileMapLayer
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="Dirt" type="TileMapLayer"]
+tile_set = SubResource("TileSet_62pl3")
+script = SubResource("GDScript_j62wk")

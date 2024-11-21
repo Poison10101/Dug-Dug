@@ -1,0 +1,201 @@
+[gd_scene load_steps=10 format=3 uid="uid://c2meaemrbnxlu"]
+
+[ext_resource type="Texture2D" uid="uid://cpwjppbajcnyg" path="res://assets/Sprites/Dug/dug_idle.png" id="1_ub6vj"]
+[ext_resource type="Texture2D" uid="uid://csw3x52l6gplq" path="res://assets/Sprites/dirt.png" id="2_ii6my"]
+[ext_resource type="FontFile" uid="uid://ce0unc25ake06" path="res://assets/C64_Pro_Mono-STYLE.ttf" id="2_pjuk3"]
+[ext_resource type="FontFile" uid="uid://byet8lrnfnj14" path="res://assets/C64_Pro-STYLE.ttf" id="3_l2vi4"]
+[ext_resource type="Texture2D" uid="uid://d3263vuydpmc0" path="res://assets/Sprites/blouder.png" id="3_oich8"]
+[ext_resource type="Texture2D" uid="uid://tjfygq0a6ch" path="res://assets/Sprites/gem7.png" id="4_oxjxk"]
+[ext_resource type="Texture2D" uid="uid://btbqjpgmxxv4p" path="res://assets/Sprites/door.png" id="5_f3buo"]
+[ext_resource type="Script" path="res://scripts/start.gd" id="7_7jvyq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pqphq"]
+
+[node name="Tutorial" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -1.0
+offset_top = -2.0
+offset_right = 324.0
+offset_bottom = 194.0
+color = Color(0, 0, 0, 1)
+
+[node name="Dug" type="ColorRect" parent="."]
+offset_left = 18.0
+offset_top = 18.0
+offset_right = 58.0
+offset_bottom = 58.0
+color = Color(0.152941, 0.160784, 0.00392157, 1)
+
+[node name="DugIdle" type="Sprite2D" parent="Dug"]
+position = Vector2(21, 20)
+texture = ExtResource("1_ub6vj")
+
+[node name="Label" type="Label" parent="Dug"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = -11.0
+offset_right = 31.0
+offset_bottom = -1.0
+theme_override_fonts/font = ExtResource("2_pjuk3")
+theme_override_font_sizes/font_size = 8
+text = "Dug"
+
+[node name="Label2" type="Label" parent="Dug"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 5.0
+offset_right = 151.0
+offset_bottom = 35.0
+theme_override_fonts/font = ExtResource("3_l2vi4")
+theme_override_font_sizes/font_size = 8
+text = "This is you! Use
+arrow keys to 
+move."
+
+[node name="Dirt" type="ColorRect" parent="."]
+offset_left = 17.0
+offset_top = 139.0
+offset_right = 57.0
+offset_bottom = 179.0
+color = Color(0.152941, 0.160784, 0.00392157, 1)
+
+[node name="Dirt" type="Sprite2D" parent="Dirt"]
+position = Vector2(20, 20)
+texture = ExtResource("2_ii6my")
+
+[node name="Label" type="Label" parent="Dirt"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = -11.0
+offset_right = 36.0
+offset_bottom = -1.0
+theme_override_fonts/font = ExtResource("2_pjuk3")
+theme_override_font_sizes/font_size = 8
+text = "Dirt"
+
+[node name="Label2" type="Label" parent="Dirt"]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 6.0
+offset_right = 168.0
+offset_bottom = 36.0
+theme_override_fonts/font = ExtResource("3_l2vi4")
+theme_override_font_sizes/font_size = 8
+text = "Touch to dig.
+Watch out for
+boulders or traps."
+
+[node name="Boulder" type="ColorRect" parent="."]
+offset_left = 18.0
+offset_top = 77.0
+offset_right = 58.0
+offset_bottom = 117.0
+color = Color(0.152941, 0.160784, 0.00392157, 1)
+
+[node name="Blouder" type="Sprite2D" parent="Boulder"]
+position = Vector2(20, 20)
+texture = ExtResource("3_oich8")
+
+[node name="Label" type="Label" parent="Boulder"]
+layout_mode = 0
+offset_left = -6.0
+offset_top = -11.0
+offset_right = 50.0
+offset_bottom = -1.0
+theme_override_fonts/font = ExtResource("2_pjuk3")
+theme_override_font_sizes/font_size = 8
+text = "Boulder"
+
+[node name="Label2" type="Label" parent="Boulder"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 5.0
+offset_right = 168.0
+offset_bottom = 35.0
+theme_override_fonts/font = ExtResource("3_l2vi4")
+theme_override_font_sizes/font_size = 8
+text = "Boulders can crush
+you if you're not
+careful."
+
+[node name="Gem" type="ColorRect" parent="."]
+offset_left = 188.0
+offset_top = 17.0
+offset_right = 228.0
+offset_bottom = 57.0
+color = Color(0.152941, 0.160784, 0.00392157, 1)
+
+[node name="Gem7" type="Sprite2D" parent="Gem"]
+position = Vector2(20, 20)
+texture = ExtResource("4_oxjxk")
+
+[node name="Label" type="Label" parent="Gem"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = -11.0
+offset_right = 31.0
+offset_bottom = -1.0
+theme_override_fonts/font = ExtResource("2_pjuk3")
+theme_override_font_sizes/font_size = 8
+text = "Gem"
+
+[node name="Label2" type="Label" parent="Gem"]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 5.0
+offset_right = 127.0
+offset_bottom = 33.0
+theme_override_fonts/font = ExtResource("3_l2vi4")
+theme_override_font_sizes/font_size = 8
+text = "Collect all
+the gems to
+leave."
+
+[node name="Door" type="ColorRect" parent="."]
+offset_left = 188.0
+offset_top = 75.0
+offset_right = 228.0
+offset_bottom = 115.0
+color = Color(0.152941, 0.160784, 0.00392157, 1)
+
+[node name="Door" type="Sprite2D" parent="Door"]
+position = Vector2(21, 20)
+texture = ExtResource("5_f3buo")
+
+[node name="Label" type="Label" parent="Door"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = -11.0
+offset_right = 36.0
+offset_bottom = -1.0
+theme_override_fonts/font = ExtResource("2_pjuk3")
+theme_override_font_sizes/font_size = 8
+text = "Door"
+
+[node name="Label2" type="Label" parent="Door"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = -6.0
+offset_right = 130.0
+offset_bottom = 57.0
+theme_override_fonts/font = ExtResource("3_l2vi4")
+theme_override_font_sizes/font_size = 8
+text = "Leave the
+level 
+after 
+collecting all
+gems."
+
+[node name="Start" type="Button" parent="."]
+offset_left = 228.0
+offset_top = 163.0
+offset_right = 316.0
+offset_bottom = 187.0
+theme_override_fonts/font = ExtResource("2_pjuk3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_pqphq")
+text = "START"
+flat = true
+script = ExtResource("7_7jvyq")
+
+[connection signal="pressed" from="Start" to="Start" method="_on_pressed"]

@@ -1,0 +1,37 @@
+extends CharacterBody2D
+
+var speed = 75
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var collect: AudioStreamPlayer = $Collect
+
+func get_input():
+	var input_dir = Input.get_vector("left", "right", "up", "down")
+	velocity = input_dir * speed
+
+func _ready() -> void:
+	pass
+
+func _physics_process(delta):
+	if Input.is_action_just_pressed("g"):
+		GameVariables.points += 1000
+	print(velocity)
+	if velocity != Vector2(0,0):
+		animation_player.play("move")
+	else:
+		animation_player.play("idle")
+	get_input()
+	move_and_collide(velocity * delta)
+	
+	var collision_info = move_and_collide(velocity * delta)
+	if collision_info:
+		var collider = collision_info.get_collider()
+		if collider.is_in_group("Dirt_Block"):
+			collider.queue_free()
+		if collider.is_in_group("Gem"):
+			GameVariables.points += 1
+			collect.play()
+			collider.queue_free()
+		if collider.is_in_group("Boulder"):
+			if velocity == Vector2(0,0):
+				get_tree().reload_current_scene()
+				GameVariables.points = 0
