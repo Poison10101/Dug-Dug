@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://cu3h3v5vp5ws8"]
+[gd_scene load_steps=12 format=3 uid="uid://cu3h3v5vp5ws8"]
 
 [ext_resource type="Texture2D" uid="uid://cpwjppbajcnyg" path="res://assets/Sprites/Dug/dug_idle.png" id="1_0ep0k"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_a6iwy"]
 [ext_resource type="Texture2D" uid="uid://cspck1424hdr1" path="res://assets/Sprites/Dug/dug_move.png" id="3_aie4j"]
 [ext_resource type="AudioStream" uid="uid://b5a6hycvmveya" path="res://assets/Audio/collect.wav" id="4_pwsgi"]
 [ext_resource type="PackedScene" uid="uid://csg2207vus7yq" path="res://scenes/player_info.tscn" id="5_8twl8"]
+[ext_resource type="AudioStream" uid="uid://btvxux6jvt68o" path="res://assets/Audio/key.wav" id="6_xnh0a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ukkle"]
 size = Vector2(18, 26)
@@ -201,3 +202,7 @@ offset_left = -160.0
 offset_top = -96.0
 offset_right = 160.0
 offset_bottom = -85.0
+
+[node name="Key" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_xnh0a")
+volume_db = 3.0

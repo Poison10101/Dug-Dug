@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kohnyiy6o5nv"
-path="res://.godot/imported/brick.png-b324c656037d7cfd67a9f5cead6c4f57.ctex"
+uid="uid://dydt0bpt47ocp"
+path="res://.godot/imported/red_lock.png-d7d233d4afa0967601fe6f647868be06.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/brick.png"
-dest_files=["res://.godot/imported/brick.png-b324c656037d7cfd67a9f5cead6c4f57.ctex"]
+source_file="res://assets/Sprites/Environment/red_lock.png"
+dest_files=["res://.godot/imported/red_lock.png-d7d233d4afa0967601fe6f647868be06.ctex"]
 
 [params]
 

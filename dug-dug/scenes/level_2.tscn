@@ -24,3 +24,6 @@ position = Vector2(160, 88)
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_52ra0")
 autoplay = true
+
+[connection signal="body_entered" from="Dirt Map/Door" to="Dirt Map/Door" method="_on_body_entered"]
+[connection signal="body_entered" from="Dirt Map/@Area2D@69123" to="Dirt Map/@Area2D@69123" method="_on_body_entered"]

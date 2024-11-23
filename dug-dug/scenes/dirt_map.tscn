@@ -1,10 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://c4bwknf1sdg5g"]
+[gd_scene load_steps=12 format=3 uid="uid://c4bwknf1sdg5g"]
 
 [ext_resource type="PackedScene" uid="uid://b7o0yqgk2dcr2" path="res://scenes/dirt_block.tscn" id="1_71xxn"]
 [ext_resource type="PackedScene" uid="uid://bdmgj0jq370bb" path="res://scenes/boulder.tscn" id="2_2ncuu"]
 [ext_resource type="PackedScene" uid="uid://0xlhkcrj21od" path="res://scenes/gem.tscn" id="3_mk314"]
 [ext_resource type="PackedScene" uid="uid://c5pbuwcukptv0" path="res://scenes/brick.tscn" id="4_t54fe"]
 [ext_resource type="PackedScene" uid="uid://vy5capvelb56" path="res://scenes/door.tscn" id="5_ina21"]
+[ext_resource type="PackedScene" uid="uid://ds3yxnen545cw" path="res://scenes/red_key.tscn" id="6_n3g2b"]
+[ext_resource type="PackedScene" uid="uid://dkgtplw5n2uvg" path="res://scenes/red_lock.tscn" id="7_gx6wl"]
+[ext_resource type="PackedScene" uid="uid://bgcu3ppw4bb08" path="res://scenes/blue_key.tscn" id="8_052ot"]
+[ext_resource type="PackedScene" uid="uid://cekly57mnnwtb" path="res://scenes/blue_lock.tscn" id="9_g7sjy"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_gxsj3"]
 scenes/1/scene = ExtResource("1_71xxn")
@@ -12,6 +16,10 @@ scenes/2/scene = ExtResource("2_2ncuu")
 scenes/3/scene = ExtResource("3_mk314")
 scenes/4/scene = ExtResource("4_t54fe")
 scenes/5/scene = ExtResource("5_ina21")
+scenes/6/scene = ExtResource("6_n3g2b")
+scenes/7/scene = ExtResource("7_gx6wl")
+scenes/8/scene = ExtResource("8_052ot")
+scenes/9/scene = ExtResource("9_g7sjy")
 
 [sub_resource type="TileSet" id="TileSet_mf1cg"]
 tile_size = Vector2i(32, 32)

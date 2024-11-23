@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=4 uid="uid://jt2q0soc375p"]
 
-[ext_resource type="Texture2D" uid="uid://bcfdjedwnp2nl" path="res://assets/Sprites/Logo.png" id="1_krv8b"]
+[ext_resource type="Texture2D" uid="uid://bcfdjedwnp2nl" path="res://assets/Sprites/Environment/Logo.png" id="1_krv8b"]
 [ext_resource type="FontFile" uid="uid://ce0unc25ake06" path="res://assets/C64_Pro_Mono-STYLE.ttf" id="2_oas27"]
 [ext_resource type="PackedScene" uid="uid://c4bwknf1sdg5g" path="res://scenes/dirt_map.tscn" id="3_f0t40"]
 [ext_resource type="Script" path="res://scripts/play.gd" id="3_jlgql"]

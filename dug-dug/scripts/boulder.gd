@@ -14,4 +14,4 @@ func _process(delta: float) -> void:
 	if raycast.is_colliding():
 		emit_signal("on_ground")
 	else:
-		position.y += 150 * delta
+		position.y += 175 * delta

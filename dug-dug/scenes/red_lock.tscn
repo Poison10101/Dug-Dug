@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dkgtplw5n2uvg"]
+
+[ext_resource type="Script" path="res://scripts/red_lock.gd" id="1_31set"]
+[ext_resource type="Texture2D" uid="uid://dydt0bpt47ocp" path="res://assets/Sprites/Environment/red_lock.png" id="1_k1pof"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hdf30"]
+size = Vector2(32, 32)
+
+[node name="Red Lock" type="CharacterBody2D" groups=["RedLock"]]
+script = ExtResource("1_31set")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_k1pof")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_hdf30")

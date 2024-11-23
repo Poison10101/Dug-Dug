@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b7o0yqgk2dcr2"]
 
-[ext_resource type="Texture2D" uid="uid://csw3x52l6gplq" path="res://assets/Sprites/dirt.png" id="1_wbyv0"]
+[ext_resource type="Texture2D" uid="uid://csw3x52l6gplq" path="res://assets/Sprites/Environment/dirt.png" id="1_wbyv0"]
 [ext_resource type="Script" path="res://scripts/dirt_block.gd" id="1_xkumh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cpdu3"]

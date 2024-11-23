@@ -3,6 +3,7 @@ extends CharacterBody2D
 var speed = 75
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var collect: AudioStreamPlayer = $Collect
+@onready var key: AudioStreamPlayer = $Key
 
 func get_input():
 	var input_dir = Input.get_vector("left", "right", "up", "down")
@@ -14,7 +15,6 @@ func _ready() -> void:
 func _physics_process(delta):
 	if Input.is_action_just_pressed("g"):
 		GameVariables.points += 1000
-	print(velocity)
 	if velocity != Vector2(0,0):
 		animation_player.play("move")
 	else:
@@ -35,3 +35,11 @@ func _physics_process(delta):
 			if velocity == Vector2(0,0):
 				get_tree().reload_current_scene()
 				GameVariables.points = 0
+		if collider.is_in_group("RedKey"):
+			collider.queue_free()
+			GameVariables.red_key = true
+			key.play()
+		if collider.is_in_group("BlueKey"):
+			collider.queue_free()
+			GameVariables.blue_key = true
+			key.play()

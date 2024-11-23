@@ -31,9 +31,9 @@ text = "LEVEL: 1"
 
 [node name="Gems" type="Label" parent="."]
 layout_mode = 0
-offset_left = 223.0
+offset_left = 236.0
 offset_top = 2.0
-offset_right = 287.0
+offset_right = 300.0
 offset_bottom = 19.0
 theme_override_fonts/font = ExtResource("1_577yx")
 theme_override_font_sizes/font_size = 8
@@ -41,9 +41,9 @@ text = "GEMS: 0"
 
 [node name="Restart" type="Button" parent="."]
 layout_mode = 0
-offset_left = 121.0
+offset_left = 138.0
 offset_top = -2.0
-offset_right = 185.0
+offset_right = 202.0
 offset_bottom = 14.0
 theme_override_fonts/font = ExtResource("1_577yx")
 theme_override_font_sizes/font_size = 8

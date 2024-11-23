@@ -2,6 +2,14 @@ extends Node
 
 var points = 0
 var level = 0
+var red_key = false
+var blue_key = false
+
+
+
+
+
+
 var current_scene = null
 
 func _ready() -> void:

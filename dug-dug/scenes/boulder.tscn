@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bdmgj0jq370bb"]
 
-[ext_resource type="Texture2D" uid="uid://d3263vuydpmc0" path="res://assets/Sprites/blouder.png" id="1_6r786"]
+[ext_resource type="Texture2D" uid="uid://d3263vuydpmc0" path="res://assets/Sprites/Environment/blouder.png" id="1_6r786"]
 [ext_resource type="Script" path="res://scripts/boulder.gd" id="1_6w23c"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5usl4"]

@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cekly57mnnwtb"]
+
+[ext_resource type="Script" path="res://blue_lock.gd" id="1_f0sfi"]
+[ext_resource type="Texture2D" uid="uid://blp153pmug7mr" path="res://assets/Sprites/Environment/blue_lock.png" id="2_3tise"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mqw4y"]
+size = Vector2(32, 32)
+
+[node name="Blue Lock" type="CharacterBody2D"]
+script = ExtResource("1_f0sfi")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_3tise")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_mqw4y")

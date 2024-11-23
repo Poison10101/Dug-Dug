@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgcu3ppw4bb08"]
+
+[ext_resource type="Texture2D" uid="uid://c4gg005em8kix" path="res://assets/Sprites/Environment/blue_key.png" id="2_s4upw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kcrw1"]
+size = Vector2(32, 16)
+
+[node name="Blue Key" type="StaticBody2D" groups=["BlueKey"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_s4upw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_kcrw1")
