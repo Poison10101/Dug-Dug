@@ -4,6 +4,9 @@ var speed = 75
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var collect: AudioStreamPlayer = $Collect
 @onready var key: AudioStreamPlayer = $Key
+@onready var timer: Timer = $Timer
+
+signal stop_music
 
 func get_input():
 	var input_dir = Input.get_vector("left", "right", "up", "down")
@@ -33,8 +36,10 @@ func _physics_process(delta):
 			collider.queue_free()
 		if collider.is_in_group("Boulder"):
 			if velocity == Vector2(0,0):
-				get_tree().reload_current_scene()
-				GameVariables.points = 0
+				timer.start()
+				$Sprite2D.visible = false
+				$CollisionShape2D.disabled = true
+				emit_signal("stop_music")
 		if collider.is_in_group("RedKey"):
 			collider.queue_free()
 			GameVariables.red_key = true
@@ -43,3 +48,12 @@ func _physics_process(delta):
 			collider.queue_free()
 			GameVariables.blue_key = true
 			key.play()
+
+
+func _on_timer_timeout() -> void:
+	die()
+	
+func die():
+	print("EFASF")
+	get_tree().reload_current_scene()
+	GameVariables.points = 0

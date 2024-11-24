@@ -7,9 +7,13 @@ func _ready() -> void:
 	GameVariables.blue_key = false
 	TitleMusic.stop()
 	GameVariables.level = 1
+	$Player.connect("stop_music", stop_music)
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+func stop_music():
+	$AudioStreamPlayer.stop()

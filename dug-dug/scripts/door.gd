@@ -23,6 +23,11 @@ func _on_body_entered(body: Node2D) -> void:
 				print("NEXT LEVEL 3")
 				call_deferred("load_load")
 				GameVariables.points = 0
+		elif GameVariables.level == 3:
+			if GameVariables.points >= 83:
+				call_deferred("load_load")
+				GameVariables.points = 0
+			print("NEXT LEVEL 4")
 
 func load_load():
 	get_tree().change_scene_to_file("res://scenes/load.tscn")

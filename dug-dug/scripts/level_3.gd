@@ -5,6 +5,7 @@ extends Node2D
 func _ready() -> void:
 	GameVariables.red_key = false
 	GameVariables.blue_key = false
+	GameVariables.level = 3
 	TitleMusic.stop()
 	pass # Replace with function body.
 
